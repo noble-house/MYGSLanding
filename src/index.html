@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyGuestServices — White-Labeled Resident Services App for Senior Living</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Digitize requests, housekeeping, maintenance, dining, transportation and announcements under your community's brand. Launch in two weeks." />
+  <meta name="keywords" content="senior living software, resident services app, white label platform, senior care technology" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myguestservices.com/" />
+  <meta property="og:title" content="MyGuestServices — White-Labeled Resident Services App for Senior Living" />
+  <meta property="og:description" content="Digitize requests, housekeeping, maintenance, dining, transportation and announcements under your community's brand. Launch in two weeks." />
+  <meta property="og:image" content="https://myguestservices.com/og-image.jpg" />
+  <meta property="og:site_name" content="MyGuestServices" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://myguestservices.com/" />
+  <meta property="twitter:title" content="MyGuestServices — White-Labeled Resident Services App for Senior Living" />
+  <meta property="twitter:description" content="Digitize requests, housekeeping, maintenance, dining, transportation and announcements under your community's brand. Launch in two weeks." />
+  <meta property="twitter:image" content="https://myguestservices.com/twitter-image.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://myguestservices.com/#organization",
+        "name": "MyGuestServices",
+        "url": "https://myguestservices.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://myguestservices.com/logo.png"
+        },
+        "description": "White-labeled resident services platform for senior living communities"
+      },
+      {
+        "@type": "Product",
+        "@id": "https://myguestservices.com/#product",
+        "name": "MyGuestServices Platform",
+        "description": "White-labeled digital resident services app for senior living communities",
+        "brand": {
+          "@id": "https://myguestservices.com/#organization"
+        },
+        "category": "Senior Living Software"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://myguestservices.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this white-labeled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, your logo, colors, and URL are used throughout the platform."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do residents need smartphones?", 
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, there's a web portal and staff-assisted intake for residents without smartphones."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Analytics Placeholder -->
+  <!-- Google Analytics 4 -->
+  <script>
+    // GA4 tracking code would go here
+    console.log('GA4 pageview tracked');
+  </script>
+  
+  <!-- LinkedIn Insight Tag (commented for now) -->
+  <!-- 
+  <script type="text/javascript">
+    _linkedin_partner_id = "YOUR_PARTNER_ID";
+    // LinkedIn tracking code...
+  </script>
+  -->
+</head>
+<body>
+  <app-root></app-root>
+  
+  <!-- UTM Parameter Tracking -->
+  <script>
+    // Store UTM parameters in localStorage for form auto-fill
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmParams = {
+        utm_source: urlParams.get('utm_source'),
+        utm_medium: urlParams.get('utm_medium'), 
+        utm_campaign: urlParams.get('utm_campaign'),
+        utm_term: urlParams.get('utm_term'),
+        utm_content: urlParams.get('utm_content'),
+        landing_path: window.location.pathname,
+        referrer: document.referrer
+      };
+      
+      // Store only non-null values
+      Object.keys(utmParams).forEach(key => {
+        if (utmParams[key]) {
+          localStorage.setItem(key, utmParams[key]);
+        }
+      });
+
+      // Analytics events
+      document.addEventListener('click', function(e) {
+        if (e.target.matches('.btn-primary') || e.target.closest('.btn-primary')) {
+          console.log('Analytics: demo_click event');
+        }
+        if (e.target.matches('.btn-secondary') || e.target.closest('.btn-secondary')) {
+          console.log('Analytics: tour_click event');
+        }
+      });
+
+      document.addEventListener('submit', function(e) {
+        if (e.target.matches('form')) {
+          console.log('Analytics: form_submit event');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
