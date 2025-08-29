@@ -3,7 +3,7 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-outcomes',
   template: `
-    <section #sectionRef class="py-20 bg-[var(--paper)]">
+    <section #sectionRef id="outcomes" class="py-20 bg-[var(--paper)]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 reveal-up">
           <h2 class="text-3xl lg:text-5xl font-bold text-[var(--ink)] mb-4">

@@ -85,7 +85,7 @@ export class NavigationComponent implements OnInit {
     { name: 'About Us', target: 'about-us' },
     { name: 'Features', target: 'modules' },
     { name: 'How It Works', target: 'go-live-in-two-weeks' },
-    { name: 'For Communities', target: 'built-for-your-level-of-care' },
+    { name: 'For Communities', target: 'outcomes' },
     { name: 'Security', target: 'security-accessibility-you-can-trust' },
     { name: 'Pricing', target: 'modular-plans-for-single-sites-or-groups' },
     { name: 'Contact', target: 'contact-form' }
