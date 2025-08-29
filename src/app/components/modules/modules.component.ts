@@ -113,6 +113,40 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
               Web + mobile, role-based permissions.
             </p>
           </div>
+
+          <!-- Emergency Communications -->
+          <div class="reveal-up bg-white rounded-2xl p-8 shadow-lg border border-[var(--border)] card-hover">
+            <div class="w-full h-32 bg-gradient-to-br from-[var(--muted)] to-gray-100 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+              <!-- Bell icon from Lucide -->
+              <svg class="w-8 h-8 text-[var(--brand)] opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.85 3.85a2.25 2.25 0 013.182 0c.23.23.345.55.345.869V19.5a2.25 2.25 0 01-2.25 2.25H6.75a2.25 2.25 0 01-2.25-2.25V4.73c0-.319.115-.64.345-.869a2.25 2.25 0 013.182 0M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+              <div class="absolute top-2 right-2 text-xs bg-[var(--brand)] text-white px-2 py-1 rounded">
+                Your Brand
+              </div>
+            </div>
+            <h3 class="text-lg font-bold text-[var(--ink)] mb-3">Emergency Communications</h3>
+            <p class="text-[var(--ink-70)] text-sm leading-relaxed">
+              Alert systems, weather notifications, safety protocols.
+            </p>
+          </div>
+
+          <!-- Digital Signage -->
+          <div class="reveal-up bg-white rounded-2xl p-8 shadow-lg border border-[var(--border)] card-hover">
+            <div class="w-full h-32 bg-gradient-to-br from-[var(--muted)] to-gray-100 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+              <!-- Monitor icon from Lucide -->
+              <svg class="w-8 h-8 text-[var(--brand)] opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <div class="absolute top-2 right-2 text-xs bg-[var(--brand)] text-white px-2 py-1 rounded">
+                Your Brand
+              </div>
+            </div>
+            <h3 class="text-lg font-bold text-[var(--ink)] mb-3">Digital Signage</h3>
+            <p class="text-[var(--ink-70)] text-sm leading-relaxed">
+              Centralized display management, content scheduling.
+            </p>
+          </div>
         </div>
 
         <div class="text-center reveal-up">

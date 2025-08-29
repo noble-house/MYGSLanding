@@ -14,12 +14,12 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
           <!-- Content -->
           <div class="reveal-up">
             <h1 class="text-4xl lg:text-6xl font-bold text-[var(--ink)] mb-6">
-              Your branded resident services app—
-              <span class="text-[var(--brand)]">built for senior living</span>
+              Your branded services platform—
+              <span class="text-[var(--brand)]">built for hospitality & care</span>
             </h1>
             
             <p class="text-xl text-[var(--ink-70)] mb-8 leading-relaxed">
-              Digitize requests, housekeeping, maintenance, dining, transportation and announcements—under your community's brand, on mobile and web.
+              Digitize requests, housekeeping, maintenance, dining, transportation, announcements & Emergency Group communications —under your community's brand, on mobile and web.
             </p>
 
             <!-- Proof Points -->
@@ -92,7 +92,7 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
               <div class="absolute inset-0 -z-10">
                 <img
                   src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Senior living community"
+                  alt="Hospitality and care community"
                   class="w-full h-full object-cover rounded-3xl opacity-20"
                   loading="lazy"
                 />
@@ -103,13 +103,30 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
       </div>
     </section>
   `,
-  styles: []
+  styles: [`
+    .btn-primary {
+      @apply bg-[var(--brand)] text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+    }
+    .btn-secondary {
+      @apply border-2 border-[var(--brand)] text-[var(--brand)] px-8 py-4 rounded-2xl font-semibold hover:bg-[var(--brand)] hover:text-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+    }
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .reveal-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `]
 })
 export class HeroComponent implements OnInit, AfterViewInit {
   proofPoints = [
-    '↓ 30–40% call volume',
-    'SLA timers & reports',
-    'Mobile + web portal'
+    'Emergency Alerts',
+    'Digital Signage',
+    'White-Labeled',
+    'Launch in 2 weeks'
   ];
 
   constructor(private elementRef: ElementRef) {}
@@ -117,36 +134,18 @@ export class HeroComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
+    this.setupScrollAnimation();
   }
 
-  scrollToContactForm(): void {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      // Add a small offset to account for any fixed headers
-      const offset = 80;
-      const elementPosition = contactForm.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    } else {
-      console.log('Contact form element not found');
-    }
-  }
-
-  private setupIntersectionObserver(): void {
+  setupScrollAnimation(): void {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const revealElements = entry.target.querySelectorAll('.reveal-up');
-            revealElements.forEach((el: Element, index: number) => {
+            entry.target.querySelectorAll('.reveal-up').forEach((el, index) => {
               setTimeout(() => {
                 el.classList.add('visible');
-              }, index * 100);
+              }, index * 150);
             });
           }
         });
@@ -154,9 +153,23 @@ export class HeroComponent implements OnInit, AfterViewInit {
       { threshold: 0.1 }
     );
 
-    const sectionElement = this.elementRef.nativeElement.querySelector('section');
-    if (sectionElement) {
-      observer.observe(sectionElement);
+    if (this.elementRef.nativeElement) {
+      observer.observe(this.elementRef.nativeElement);
+    }
+  }
+
+  scrollToContactForm(): void {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      const offset = 80;
+      const elementPosition = contactForm.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    } else {
+      console.log('Contact form element not found');
     }
   }
 }

@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
         <app-about-us></app-about-us>
         <app-outcomes></app-outcomes>
         <app-pathways></app-pathways>
+        <app-emergency-communications></app-emergency-communications>
         <app-modules></app-modules>
         <app-how-it-works></app-how-it-works>
         <app-trust></app-trust>

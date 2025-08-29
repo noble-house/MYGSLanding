@@ -10,6 +10,7 @@ import { SocialProofComponent } from './components/social-proof/social-proof.com
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { OutcomesComponent } from './components/outcomes/outcomes.component';
 import { PathwaysComponent } from './components/pathways/pathways.component';
+import { EmergencyCommunicationsComponent } from './components/emergency-communications/emergency-communications.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 import { TrustComponent } from './components/trust/trust.component';
@@ -29,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutUsComponent,
     OutcomesComponent,
     PathwaysComponent,
+    EmergencyCommunicationsComponent,
     ModulesComponent,
     HowItWorksComponent,
     TrustComponent,
