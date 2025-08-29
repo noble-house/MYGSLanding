@@ -79,6 +79,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
                   />
                 </div>
 
+                <div>
+                  <label for="message" class="block text-sm font-medium text-[var(--ink)] mb-2">
+                    Message / Notes (optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    formControlName="message"
+                    rows="4"
+                    class="w-full px-4 py-3 border border-[var(--border)] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent transition-colors resize-none"
+                    placeholder="Tell us about your needs, questions, or any specific requirements..."
+                  ></textarea>
+                </div>
+
                 <button
                   type="submit"
                   [disabled]="form.invalid"
@@ -148,7 +161,8 @@ export class LeadFormComponent implements OnInit, AfterViewInit {
       fullName: ['', Validators.required],
       workEmail: ['', [Validators.required, Validators.email]],
       community: ['', Validators.required],
-      phone: ['']
+      phone: [''],
+      message: ['']
     });
   }
 
